@@ -1,0 +1,81 @@
+Apple MacBook Air 13" 256GB 2020 Gold/Silver/Gray
+Apple MacBook Pro 16" 1TB 2019 (MVVM2UA/A) Silver/Gray
+Apple iPhone 12 128GB Black/Blue
+Apple iPhone SE Red/White
+Apple iPhone 11 Purple/Green/Yellow
+Apple Watch Gray/Red/Pink
+AirPods 
+Apple AirPods Pro
+EarPods
+Apple iPad 10.2" Gray/Silver/Gold
+--------------------------------------------------------------------
+                         DataBase
+--------------------------------------------------------------------
+
+INSERT INTO Images(ProductId, Url, AltText) values
+(1, '/img/macbook/air_gold_1.jpg', 'MacBook Air Gold'),
+(1, '/img/macbook/air_gold_2.jpg', 'MacBook Air Gold'),
+(1, '/img/macbook/air_gold_3.jpg', 'MacBook Air Gold'),
+(2, '/img/macbook/air_gray_1.jpg', 'MacBook Air Gray'),
+(2, '/img/macbook/air_gray_2.jpg', 'MacBook Air Gray'),
+(2, '/img/macbook/air_gray_3.jpg', 'MacBook Air Gray'),
+(3, '/img/macbook/air_silver_1.jpg', 'MacBook Air Silver'),
+(3, '/img/macbook/air_silver_2.jpg', 'MacBook Air Silver'),
+(3, '/img/macbook/air_silver_3.jpg', 'MacBook Air Silver'),
+(4, '/img/macbook/pro_gray_1.jpg', 'MacBook Air Gray'),
+(4, '/img/macbook/pro_gray_2.jpg', 'MacBook Air Gray'),
+(5, '/img/macbook/pro_silver_1.jpg', 'MacBook Air Silver'),
+(5, '/img/macbook/pro_silver_2.jpg', 'MacBook Air Silver'),
+(6, '/img/watch/pink_1.jpg', 'Watch Series 6 Pink'),
+(6, '/img/watch/pink_2.jpg', 'Watch Series 6 Pink'),
+(7, '/img/watch/red_1.jpg', 'Watch Series 6 Red'),
+(7, '/img/watch/red_2.jpg', 'Watch Series 6 Red'),
+(8, '/img/watch/blue_1.jpg', 'Watch Series 6 Blue'),
+(8, '/img/watch/blue_2.jpg', 'Watch Series 6 Blue'),
+(9, '/img/ipad/gold_1.jpg', 'iPad Gold'),
+(9, '/img/ipad/gold_2.jpg', 'iPad Gold'),
+(10, '/img/ipad/silver_1.jpg', 'iPad Silver'),
+(10, '/img/ipad/silver_2.jpg', 'iPad Silver'),
+(11, '/img/ipad/gray_1.jpg', 'iPad Gray'),
+(11, '/img/ipad/gray_2.jpg', 'iPad Gray'),
+(12, '/img/iphone/12_black_1.jpg', 'iPhone Black'),
+(12, '/img/iphone/12_black_2.jpg', 'iPhone Black'),
+(13, '/img/iphone/12_blue_1.jpg', 'iPhone Blue'),
+(13, '/img/iphone/12_blue_2.jpg', 'iPhone Blue'),
+(14, '/img/iphone/11_green_1.jpg', 'iPhone Green'),
+(14, '/img/iphone/11_green_2.jpg', 'iPhone Green'),
+(15, '/img/iphone/11_purple_1.jpg', 'iPhone Purple'),
+(15, '/img/iphone/11_purple_2.jpg', 'iPhone Purple'),
+(16, '/img/iphone/11_yellow_1.jpg', 'iPhone Yellow'),
+(16, '/img/iphone/11_yellow_2.jpg', 'iPhone Yellow'),
+(17, '/img/iphone/se_red_1.jpg', 'iPhone Red'),
+(17, '/img/iphone/se_red_2.jpg', 'iPhone Red'),
+(18, '/img/iphone/se_white_1.jpg', 'iPhone White'),
+(18, '/img/iphone/se_white_2.jpg', 'iPhone White'),
+(19, '/img/earphones/airpods_1.jpg', 'Airpods White'),
+(19, '/img/earphones/airpods_2.jpg', 'Airpods White'),
+(19, '/img/earphones/airpods_3.jpg', 'Airpods White');
+select * from Images;
+
+INSERT INTO Products(Type, Name, Color, Description, Price, Guarantee, Parameters, Weight, Country) VALUES 
+('macbook', 'MacBook Air 13" 2020 Gold', 'Gold', 'Screen 13.3 "IPS (2560x1600), glossy / Intel Core i3 (1.1 - 3.2 GHz) / RAM 8 GB / SSD 256 GB / Intel Iris Plus Graphics / Wi-Fi / Bluetooth / macOS Catalina / 1.29 kg / gold', 1299, 12, '30.41 x 21.24 x 1.61', 1.29, 'China'),
+('macbook', 'MacBook Air 13" 2020 Gray', 'Gray', 'Screen 13.3 "IPS (2560x1600), glossy / Intel Core i3 (1.1 - 3.2 GHz) / RAM 8 GB / SSD 256 GB / Intel Iris Plus Graphics / Wi-Fi / Bluetooth / macOS Catalina / 1.29 kg / gray', 1299, 12, '30.41 x 21.24 x 1.61', 1.29, 'China'),
+('macbook', 'MacBook Air 13" 2020 Silver', 'Silver', 'Screen 13.3 "IPS (2560x1600), glossy / Intel Core i3 (1.1 - 3.2 GHz) / RAM 8 GB / SSD 256 GB / Intel Iris Plus Graphics / Wi-Fi / Bluetooth / macOS Catalina / 1.29 kg / silver', 1299, 12, '30.41 x 21.24 x 1.61', 1.29, 'China'),
+('macbook', 'MacBook Pro 13" Retina Space Gray', 'Gray', 'Screen 13.3 "IPS (2560x1600), glossy / Intel Core i5-8279U (2.4 - 4.1 GHz) / RAM 8 GB / SSD 512 GB / Intel Iris Plus Graphics 655 / Wi-Fi / Bluetooth / macOS Mojave / 1.37 kg / gray', 1699, 24, '304.1 x 212.4 x 14.9', 1.37, 'USA'),
+('macbook', 'MacBook Pro 13" Retina Silver', 'Silver', 'Screen 13.3 "IPS (2560x1600), glossy / Intel Core i5-8279U (2.4 - 4.1 GHz) / RAM 8 GB / SSD 512 GB / Intel Iris Plus Graphics 655 / Wi-Fi / Bluetooth / macOS Mojave / 1.37 kg / silver', 1799, 24, '304.1 x 212.4 x 14.9', 1.37, 'USA'),
+('watch', 'Watch Series 6 GPS 44mm Pink', 'Pink', 'Wireless charger, Alarm clock, Built-in microphone, Protection against water, dust, Control of daily activity, With a compass Stopwatch, Messages, Sleep tracking, Camera control, Music player control', 399, 12, '44 x 38 x 10.4', 0.365, 'USA'),
+('watch', 'Watch Series 6 GPS 44mm Red', 'Red', 'Wireless charger, Alarm clock, Built-in microphone, Protection against water, dust, Control of daily activity, With a compass Stopwatch, Messages, Sleep tracking, Camera control, Music player control', 499, 12, '44 x 38 x 10.4', 0.365, 'USA'),
+('watch', 'Watch Series 6 GPS 44mm Blue', 'Blue', 'Wireless charger, Alarm clock, Built-in microphone, Protection against water, dust, Control of daily activity, With a compass Stopwatch, Messages, Sleep tracking, Camera control, Music player control', 299, 12, '44 x 38 x 10.4', 0.365, 'USA'),
+('ipad', 'iPad 10.2" 2020 Gold', 'Gold', 'A12 Bionic processor with 64-bit architecture Neural Engine System Oleophobic, fingerprint-resistant coating Apple Pencil (1st generation) support Wi-Fi (802.11a / b / g / n / ac); support for two bands (2.4 GHz and 5 GHz); HT80 with MIMO technology', 899, 12, '174.1 x 250.6 x 7.5', 0.490, 'USA'),
+('ipad', 'iPad 10.2" 2020 Silver', 'Silver', 'A12 Bionic processor with 64-bit architecture Neural Engine System Oleophobic, fingerprint-resistant coating Apple Pencil (1st generation) support Wi-Fi (802.11a / b / g / n / ac); support for two bands (2.4 GHz and 5 GHz); HT80 with MIMO technology', 999, 12, '174.1 x 250.6 x 7.5', 0.490, 'USA'),
+('ipad', 'iPad 10.2" 2020 Gray', 'Gray', 'A12 Bionic processor with 64-bit architecture Neural Engine System Oleophobic, fingerprint-resistant coating Apple Pencil (1st generation) support Wi-Fi (802.11a / b / g / n / ac); support for two bands (2.4 GHz and 5 GHz); HT80 with MIMO technology', 799, 12, '174.1 x 250.6 x 7.5', 0.490, 'USA'),
+('iphone', 'iPhone 12 128GB Black', 'Black', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 1299, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('iphone', 'iPhone 12 128GB Blue', 'Blue', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 1299, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('iphone', 'iPhone 11 64GB Green', 'Green', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 999, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('iphone', 'iPhone 11 64GB Purple', 'Purple', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 999, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('iphone', 'iPhone 11 64GB Yellow', 'Yellow', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 999, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('iphone', 'iPhone SE 64GB Red', 'Red', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 799, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('iphone', 'iPhone SE 64GB White', 'White', 'Communication standard 2G (GPRS / EDGE) 3G (WCDMA / UMTS / HSPA) 4G (LTE) 5G. Screen diagonal - 6.1. The number of megapixels of the main camera is -12 Mp + 12 Mp. The number of megapixels of the front camera is 12 megapixels. Display resolution - 2532x1170. Built-in memory 128 GB', 799, 12, '71.5 x 146.7 x 7.5', 0.130, 'USA'),
+('earphones', 'AirPods with Charging Case', 'White', 'AirPods sensors (in each earbud), Dual directional microphones, Dual optical sensors, Motion recognition accelerometer, Voice activity detection accelerometer', 199, 6, '44.3 х 21.3 х 53.5', 0.048, 'USA');
+select * from Products;
+

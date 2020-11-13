@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Самостійна робота 1 </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8836cd6743.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 w-100 my-md-3 pl-md-3">
+                <div class="bg-light mr-md-3 pt-1 px-3 text-center" style="height:100vh;">
+                    <div class=" py-3">
+                        <h2 class="display-5">Самостійна робота 1</h2>
+                        <p class="lead">КНСП, Йовбак Андріанна, Варіант 7</p>
+                    </div>
+                    <div class="bg-white box-shadow mx-auto pb-5"
+                        style="width: 80%; border-radius: 21px 21px 0 0;">
+                        <div class="row px-5 pt-md-5 pt-3" id="fields">
+                            <div class="col-md-6 mb-3">
+                                <label for="m">Метри</label>
+                                <input type="number" class="form-control" id="m" placeholder="Метри" value=""
+                                    required="true">
+                                <div class="text-danger d-none error">
+                                    Поле є обовязковим!
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="km">Кілометри</label>
+                                <input type="text" class="form-control" id="km" placeholder="Кілометри" value="" readonly>
+                                <div class="d-none text-danger error">
+                                    Поле є обовязковим!
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-4 mx-5">
+                        <div class="row px-5">
+                            <div class="col-md-5 my-1">
+                                <button class="btn btn-secondary btn-lg btn-block" id="clear">Очистити поля</button>
+                            </div>
+                            <div class="col-md-2 my-1">
+                                <button class="btn btn-success btn-lg btn-block" id="swap"><i class="fas fa-exchange-alt"></i></button>
+                            </div>
+                            <div class="col-md-5 my-1">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit" id="count">Виконати перерахунок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+﻿@using AppleStore.Models.Catalog
+@model AppleStore.Models.Catalog.ProductIndexModel
+
+@foreach (var asset in @Model.Products)
+{
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a class="card h-100 p-1" asp-controller="Catalog" asp-action="Detail" asp-route-id="@asset.Id">
+            <span class="img-link">
+                <img src="@asset.Image.Url" class="mw-100 mh-85" alt="@asset.Image.AltText" />
+            </span>
+            <div class="card-body pt-0">
+                <h4 class="card-title display-6">
+                    @asset.Name
+                </h4>
+                <h5 class="display-6 weight-400">@asset.Price$</h5>
+                <p class="card-text">@asset.Description</p>
+            </div>
+        </a>
+    </div>
+}

@@ -1,0 +1,119 @@
+﻿@using AppleStore.Models.Catalog
+@model AppleStore.Models.Catalog.ProductIndexModel
+@{
+    ViewBag.Title = "Catalog";
+}
+
+<div class="container">
+    <div class="row py-2">
+        <div class="col-lg-7 col-12 filter d-flex align-items-center">
+            <span class="d-none d-sm-block">Filter by:</span>
+            <div class="pl-3 d-flex">
+                <form>
+                    <input id="all" type="checkbox" checked class="opacity-0 checkbox">
+                    <label for="all">
+                        <i class="fab display-5 fa-apple btn btn-secondary active"></i>
+                    </label>
+                    <input id="macbook" type="checkbox" class="opacity-0 checkbox">
+                    <label for="macbook">
+                        <i class="fas display-5 fa-laptop btn btn-secondary active"></i>
+                    </label>
+                    <input id="watch" type="checkbox" class="opacity-0 checkbox">
+                    <label for="watch">
+                        <i class="far display-5 fa-clock btn btn-secondary active"></i>
+                    </label>
+                    <input id="ipad" type="checkbox" class="opacity-0 checkbox">
+                    <label for="ipad">
+                        <i class="fas display-5 fa-tablet btn btn-secondary active"></i>
+                    </label>
+                    <input id="iphone" type="checkbox" class="opacity-0 checkbox">
+                    <label for="iphone">
+                        <i class="fas display-5 fa-mobile-alt btn btn-secondary active"></i>
+                    </label>
+                    <input id="earphones" type="checkbox" class="opacity-0 checkbox">
+                    <label for="earphones">
+                        <i class="fas display-5 fa-headphones-alt btn btn-secondary active"></i>
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-3 col-12 offset-lg-2 pt-3 pt-lg-0">
+            <div class="input-group mb-3 sort float-right">
+                <div class="input-group-prepend btn btn-secondary py-0">
+                    <label class="m-0" for="inputGroupSelect01" style="line-height: 35px;">Sort by</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="name_up">Name ↑</option>
+                    <option value="name_down">Name ↓</option>
+                    <option value="price_up">Price ↑</option>
+                    <option value="price_down">Price ↓</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row pt-2" id="products">
+
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+    var id = '#products';
+    let selected = '';
+    let search = '';
+    GetProducts();
+
+    $('select').on('change', function () {
+        selected = this.value;
+        GetProducts();
+    });
+
+    $('#search').on('keypress', function (e) {
+        if (e.charCode == 13) {
+            search = this.value;
+            GetProducts();
+            e.preventDefault();
+        }
+    });
+
+    $(".checkbox").change(function () {
+        if (this.id != 'all') $('#all').prop("checked", false);
+        if (this.id == 'all') {
+            $(".checkbox:checked").each(function () {
+                $(this).prop("checked", false);
+            });
+            $('#all').prop("checked", true);
+        }
+
+        GetProducts();
+    });
+
+    function GetProducts() {
+        let filters_string = "";
+        $(".checkbox:checked").each(function (index) {
+            if (index != 0) filters_string += '*';
+            filters_string += this.id;
+        });
+
+        let filters = Object.assign({ sort: selected }, { filter: filters_string }, { find: search });
+
+        $(id).html('<img src="https://i.gifer.com/7plQ.gif" class="mx-auto" />');
+        $.ajax({
+            url: '/Catalog/Partial',
+            type: 'POST',
+            cache: false,
+            async: true,
+            dataType: "html",
+            beforeSend: function () {
+            },
+            data: filters
+        })
+            .done(function (result) {
+                $(id).html(result);
+            }).fail(function (xhr) {
+                console.log('error : ' + xhr.status + ' - ' + xhr.statusText + ' - ' + xhr.responseText);
+            });
+    }
+</script>

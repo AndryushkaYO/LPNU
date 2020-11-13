@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "About";
+    ViewData["AuthorName"] = "Andrianna";
+    ViewData["FeaturesList"] = "[ \"creative.\", \"student.\", \"developer.\", \"creator.\", \"cheeful!\" ]";
+}
+
+<main role="main">
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-3">
+                        Hi! I'm @ViewData["AuthorName"]. <br /> And I am
+                        <span class="txt-rotate orange"
+                              data-period="2000"
+                              data-rotate='@ViewData["FeaturesList"]'></span>
+                    </h1>
+                    <p class="pt-4 pb-3">
+                        I was born on the 20th of December 1999.
+                        I’m 20 years old.
+                        I’m usually emotional and active person.
+                        My life is very diverse.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="display-5 pb-2">Contact info</h2>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                +38(066)-263-9014
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                +38(063)-469-8144
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                andrianna.yovbak.mknm.2020@lpnu.ua
+                            </p>
+                            <p>
+                                <i class="far fa-envelope"></i>
+                                andri.yovbak@gmail.com
+                            </p>
+                            <p>
+                                <i class="fas fa-home"></i>
+                                Lviv, st.Lukasha 4, 219
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex flex-column justify-content-between align-items-center">
+                    <img class="img-fluid mx-auto main-photo"
+                         alt="main photo"
+                         src="/img/me_main.jpg">
+                    <div class="d-flex justify-content-between align-items-end w-75">
+                        <p>
+                            <a class="btn btn-secondary btn-circle p-0"
+                               href="https://t.me/Andri_Yovbak"
+                               role="button">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn btn-secondary btn-circle p-0"
+                               href="https://www.facebook.com/andri.yovbak"
+                               role="button">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn btn-secondary btn-circle p-0"
+                               href="https://www.instagram.com/andri_yovbak/"
+                               role="button">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn btn-secondary btn-circle p-0"
+                               href="https://github.com/AndryushkaYO"
+                               role="button">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="orange">Creator</h2>
+                <p>Going to open IT-school for children.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="orange">Student</h2>
+                <p>Studing at National University Lviv Polytechnic.</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="orange">Developer</h2>
+                <p>Working as front-end developer at EPAM Systems.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
